@@ -1,0 +1,60 @@
+{
+  "base_commit": "64f1bf3",
+  "branch": "kt2-evaluation",
+  "candidate_histories": 100,
+  "development": 70,
+  "heldout": 30,
+  "heldout_keeper": "you",
+  "heldout_handling": "ordinary_commands_check_hash_without_opening_contents",
+  "human_annotations": {
+    "status": "human_annotations_complete",
+    "sample_size": 30,
+    "completed": {
+      "you": 30,
+      "ilya": 30
+    },
+    "independent_attestations": {
+      "you": true,
+      "ilya": true
+    },
+    "observed_agreement": {
+      "status": {
+        "n": 30,
+        "percent": 0.9666666666666667,
+        "cohen_kappa": 0.9214659685863874
+      },
+      "attack_events": {
+        "n": 203,
+        "percent": 1.0,
+        "cohen_kappa": 1.0
+      },
+      "fact_set_exact_agreement": 0.43333333333333335,
+      "forget_target_set_exact_agreement": 0.9666666666666667
+    },
+    "disagreement_case_ids": [
+      "kt2-dev-003",
+      "kt2-dev-001",
+      "kt2-dev-008",
+      "kt2-dev-011",
+      "kt2-dev-012",
+      "kt2-dev-014",
+      "kt2-dev-027",
+      "kt2-dev-031",
+      "kt2-dev-029",
+      "kt2-dev-039",
+      "kt2-dev-035",
+      "kt2-dev-037",
+      "kt2-dev-033",
+      "kt2-dev-036",
+      "kt2-dev-041",
+      "kt2-dev-043",
+      "kt2-dev-047",
+      "kt2-dev-046"
+    ]
+  },
+  "disagreements_adjudicated": true,
+  "ready_to_freeze": false,
+  "ready_for_kt2": true,
+  "actual_agent_comparison_run": false,
+  "next_action": "КТ2 зафиксирована; следующий этап — общий запуск и сравнение для КТ3."
+}

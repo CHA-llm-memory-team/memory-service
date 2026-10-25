@@ -1,0 +1,113 @@
+{
+  "id": "kt2-protocol-v1-reviewed",
+  "status": "reviewed_and_frozen",
+  "dataset_manifest": "eval/kt2/manifest.json",
+  "contract_document": "design_doc.md",
+  "memory_token_budget": 2048,
+  "secondary_budgets": [
+    512,
+    1024,
+    2048
+  ],
+  "tokenizer": {
+    "package": "tiktoken",
+    "version": "0.12.0",
+    "encoding": "o200k_base",
+    "table_sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d"
+  },
+  "answer_agent": {
+    "model": "gpt-4.1-mini-2025-04-14",
+    "temperature": 0,
+    "max_output_tokens": 512,
+    "instructions": "eval/kt2/answer_instructions.txt",
+    "repetitions": 3,
+    "availability_checked": false,
+    "note": "Снимок выбран для одинакового отвечающего агента. API не вызывался; доступность аккаунта и объявленное прекращение поддержки проверить перед КТ3. Смена модели требует новой версии протокола."
+  },
+  "comparators": [
+    {
+      "id": "history",
+      "implementation": "eval/baseline.py",
+      "algorithm": "whole-event-suffix-v1"
+    },
+    {
+      "id": "mem0",
+      "upstream_tag": "v2.2.1",
+      "source": "https://github.com/mem0ai/mem0/releases/tag/v2.2.1",
+      "installed": false,
+      "status": "comparison_target_not_benchmark_result"
+    },
+    {
+      "id": "memory_service",
+      "status": "planned_for_kt3"
+    }
+  ],
+  "annotation": {
+    "sample_size": 30,
+    "reviewers": [
+      "you",
+      "ilya"
+    ],
+    "independent": true,
+    "labels_hidden_in_forms": true,
+    "required_agreement": [
+      "status_percent",
+      "status_cohen_kappa",
+      "attack_event_percent",
+      "attack_event_cohen_kappa",
+      "fact_set_exact_agreement",
+      "forget_target_set_exact_agreement"
+    ],
+    "observed_agreement": {
+      "status": {
+        "n": 30,
+        "percent": 0.9666666666666667,
+        "cohen_kappa": 0.9214659685863874
+      },
+      "attack_events": {
+        "n": 203,
+        "percent": 1.0,
+        "cohen_kappa": 1.0
+      },
+      "fact_set_exact_agreement": 0.43333333333333335,
+      "forget_target_set_exact_agreement": 0.9666666666666667
+    },
+    "independence_scope": "between_reviewers; not fully unassisted",
+    "fully_unassisted": false,
+    "assistance_log": [
+      {
+        "reviewer": "you",
+        "case_id": "kt2-dev-008",
+        "assistance": "Assistant explained event time versus arrival order and explicitly advised status ok before submission."
+      }
+    ],
+    "observed_attack_label_counts": {
+      "ordinary": 197,
+      "attack": 6
+    },
+    "resolution": {
+      "confirmed_by": "Илья Чепелюк",
+      "status_case_027": "needs_clarification",
+      "expiry_cases_029_030": "unknown",
+      "wording": "Unified on user instruction; original forms and pre-resolution agreement unchanged",
+      "public_evidence": "eval/kt2/annotation_resolution.json"
+    }
+  },
+  "heldout": {
+    "count": 30,
+    "keeper": "you",
+    "allowed_stage": "kt4",
+    "tracked_in_git": false
+  },
+  "release_gates": {
+    "human_annotations_complete": true,
+    "disagreements_resolved": true,
+    "heldout_keeper_assigned": true
+  },
+  "execution_evidence": {
+    "baseline_context_checked": true,
+    "baseline_answers_measured": false,
+    "mem0_installed": false,
+    "memory_service_implemented": false
+  }
+}

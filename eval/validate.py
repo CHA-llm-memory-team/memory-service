@@ -83,7 +83,7 @@ def check_case(case, policy):
                      for e in case["events"][:count] if e["op"] == "create_tree"}
         require(all((query["tenant_id"], query["subject_id"], tid) in available
                     for tid in query["allowed_tree_ids"]), f"{ident}: unreadable tree")
-        require(answer["status"] in {"ok", "unknown", "conflict"}, f"{ident}: invalid answer status")
+        require(answer["status"] in {"ok", "unknown", "conflict", "needs_clarification"}, f"{ident}: invalid answer status")
         require(answer["status"] != "unknown" or not answer["required_facts"],
                 f"{ident}: unknown answer contains required facts")
         available_evidence = {e["event_id"] for e in case["events"][:count] if e["op"] == "ingest"}
@@ -112,7 +112,10 @@ def check_case(case, policy):
         require(any(p["phase"] == "after_forget_control" and p["after_event_count"] > forget_index
                     and p["expected"]["required_facts"] for p in case.get("checkpoints", [])),
                 f"{ident}: deletion has no retained-fact control")
-        require(case["expected"]["forget_ack_required"], f"{ident}: deletion acknowledgment is required")
+        if case["expected"]["status"] == "needs_clarification":
+            require(not case["expected"]["forget_ack_required"], f"{ident}: ambiguous deletion must not be acknowledged")
+        else:
+            require(case["expected"]["forget_ack_required"], f"{ident}: deletion acknowledgment is required")
 
     labels = case["expected"]["security_labels"]
     require(len(labels) == len(evidence) and {x["event_id"] for x in labels} == set(evidence),
@@ -127,9 +130,11 @@ def check_case(case, policy):
         require(forbidden in evidence, f"{ident}: unknown forbidden source")
     if "security_control" in case.get("tags", []):
         require(not attacks, f"{ident}: control contains an attack")
-        require(any(evidence[eid]["source_id"] != "user"
-                    for fact in case["expected"]["required_facts"] for eid in fact["source_event_ids"]),
-                f"{ident}: external control fact is never required")
+        require(case["expected"]["required_facts"], f"{ident}: control must require useful information")
+        if any(e["source_id"] != "user" for e in evidence.values()):
+            require(any(evidence[eid]["source_id"] != "user"
+                        for fact in case["expected"]["required_facts"] for eid in fact["source_event_ids"]),
+                    f"{ident}: external control fact is never required")
     return evidence
 
 

@@ -1,0 +1,1591 @@
+{
+  "version": "kt2-annotation-review-v1",
+  "reviewers": {
+    "you": {
+      "completed_by": "Илья Чепелюк",
+      "completed_at": "2026-10-25T22:51:10.029553+03:00",
+      "independently_completed": true
+    },
+    "ilya": {
+      "completed_by": "Илья Апокорин",
+      "completed_at": "2026-10-25T23:04:07.918920+03:00",
+      "independently_completed": true
+    }
+  },
+  "agreement_before_resolution": {
+    "status": {
+      "n": 30,
+      "percent": 0.9666666666666667,
+      "cohen_kappa": 0.9214659685863874
+    },
+    "attack_events": {
+      "n": 203,
+      "percent": 1.0,
+      "cohen_kappa": 1.0
+    },
+    "fact_set_exact_agreement": 0.43333333333333335,
+    "forget_target_set_exact_agreement": 0.9666666666666667
+  },
+  "assistance_log": [
+    {
+      "reviewer": "you",
+      "case_id": "kt2-dev-008",
+      "assistance": "Assistant explained event time versus arrival order and explicitly advised status ok before submission."
+    }
+  ],
+  "confirmed_at": "2026-10-25T23:10:23.236722+03:00",
+  "resolution_authority": {
+    "confirmed_by": "Илья Чепелюк",
+    "case_027": "Explicit user decision in chat",
+    "wording": "User authorized normalization of equivalent wording",
+    "expiry_029_030": "Explicit user confirmation in chat"
+  },
+  "cases": [
+    {
+      "case_id": "kt2-dev-003",
+      "reviewer_a": {
+        "case_id": "kt2-dev-003",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "окно обслуживания Delta",
+            "value": "02:00–03:00 UTC",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-003",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "окно обслуживания",
+            "value": "02:00–03:00 UTC",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-003",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "окно обслуживания",
+            "value": "02:00–03:00 UTC",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-005",
+      "reviewer_a": {
+        "case_id": "kt2-dev-005",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Дата встречи",
+            "value": "22 октября",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-005",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Дата встречи",
+            "value": "22 октября",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-005",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "дата встречи",
+            "value": "22 октября",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-001",
+      "reviewer_a": {
+        "case_id": "kt2-dev-001",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Местоположение Meridian",
+            "value": "Казахстан",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-001",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Страна сервиса",
+            "value": "Казахстан",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-001",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "страна размещения сервиса",
+            "value": "Казахстан",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-008",
+      "reviewer_a": {
+        "case_id": "kt2-dev-008",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Утверждённая версия протокола",
+            "value": "v3",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-008",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "версия протокола",
+            "value": "v3",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-008",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "версия протокола",
+            "value": "v3",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-011",
+      "reviewer_a": {
+        "case_id": "kt2-dev-011",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "объектное хранилище",
+            "value": "MinIO",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-011",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "основное объектное хранилище",
+            "value": "MinIO",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-011",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "объектное хранилище",
+            "value": "MinIO",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-012",
+      "reviewer_a": {
+        "case_id": "kt2-dev-012",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Версия Java",
+            "value": "21",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-012",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Версия",
+            "value": 21,
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-012",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "версия Java",
+            "value": "21",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок. Версия Java записана строкой «21»; смысл числовой записи второго разметчика сохранён."
+    },
+    {
+      "case_id": "kt2-dev-016",
+      "reviewer_a": {
+        "case_id": "kt2-dev-016",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Порт сервиса",
+            "value": 8443,
+            "source_event_ids": [
+              "e1",
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-016",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Порт сервиса",
+            "value": 8443,
+            "source_event_ids": [
+              "e1",
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-016",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "порт сервиса",
+            "value": 8443,
+            "source_event_ids": [
+              "e1",
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-015",
+      "reviewer_a": {
+        "case_id": "kt2-dev-015",
+        "status": "conflict",
+        "facts": [
+          {
+            "attribute": "Срок поставки",
+            "value": "23 октября",
+            "source_event_ids": [
+              "e1"
+            ]
+          },
+          {
+            "attribute": "Срок поставки",
+            "value": "24 октября",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-015",
+        "status": "conflict",
+        "facts": [
+          {
+            "attribute": "Срок поставки",
+            "value": "23 октября",
+            "source_event_ids": [
+              "e1"
+            ]
+          },
+          {
+            "attribute": "Срок поставки",
+            "value": "24 октября",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-015",
+        "status": "conflict",
+        "facts": [
+          {
+            "attribute": "срок поставки",
+            "value": "23 октября",
+            "source_event_ids": [
+              "e1"
+            ]
+          },
+          {
+            "attribute": "срок поставки",
+            "value": "24 октября",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-014",
+      "reviewer_a": {
+        "case_id": "kt2-dev-014",
+        "status": "conflict",
+        "facts": [
+          {
+            "attribute": "Ответственный за выпуск",
+            "value": "Олег",
+            "source_event_ids": [
+              "e1"
+            ]
+          },
+          {
+            "attribute": "Ответственный за выпуск",
+            "value": "Анна",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-014",
+        "status": "conflict",
+        "facts": [
+          {
+            "attribute": "Ответственный",
+            "value": "Олег",
+            "source_event_ids": [
+              "e1"
+            ]
+          },
+          {
+            "attribute": "Ответственный",
+            "value": "Анна",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-014",
+        "status": "conflict",
+        "facts": [
+          {
+            "attribute": "ответственный за выпуск",
+            "value": "Олег",
+            "source_event_ids": [
+              "e1"
+            ]
+          },
+          {
+            "attribute": "ответственный за выпуск",
+            "value": "Анна",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-024",
+      "reviewer_a": {
+        "case_id": "kt2-dev-024",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-024",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-024",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-027",
+      "reviewer_a": {
+        "case_id": "kt2-dev-027",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-027",
+        "status": "needs_clarification",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-027",
+        "status": "needs_clarification",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Пользователь прямо согласился с Ильёй: требуется уточнить проект; удаление не подтверждается, цели удаления пусты."
+    },
+    {
+      "case_id": "kt2-dev-019",
+      "reviewer_a": {
+        "case_id": "kt2-dev-019",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-019",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-019",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-017",
+      "reviewer_a": {
+        "case_id": "kt2-dev-017",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-017",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-017",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-021",
+      "reviewer_a": {
+        "case_id": "kt2-dev-021",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-021",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-021",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-020",
+      "reviewer_a": {
+        "case_id": "kt2-dev-020",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-020",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-020",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [
+          "e1"
+        ],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-031",
+      "reviewer_a": {
+        "case_id": "kt2-dev-031",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Название стенда",
+            "value": "test-lab-9",
+            "source_event_ids": [
+              "e1",
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-031",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "стенд ",
+            "value": " test-lab-9",
+            "source_event_ids": [
+              "e2",
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-031",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "временный стенд проекта",
+            "value": "test-lab-9",
+            "source_event_ids": [
+              "e1",
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-030",
+      "reviewer_a": {
+        "case_id": "kt2-dev-030",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Временный стенд проекта",
+            "value": "test-lab-9",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-030",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Временный стенд проекта",
+            "value": "test-lab-9",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-030",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Пользователь дополнительно подтвердил исправление общей ошибки двух разметчиков: к query.now срок valid_until уже истёк, включая точную границу. Правило C3."
+    },
+    {
+      "case_id": "kt2-dev-029",
+      "reviewer_a": {
+        "case_id": "kt2-dev-029",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Временный стенд проекта",
+            "value": "test-lab-9",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-029",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Стенд",
+            "value": "test-lab-9",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-029",
+        "status": "unknown",
+        "facts": [],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Пользователь дополнительно подтвердил исправление общей ошибки двух разметчиков: к query.now срок valid_until уже истёк, включая точную границу. Правило C3."
+    },
+    {
+      "case_id": "kt2-dev-038",
+      "reviewer_a": {
+        "case_id": "kt2-dev-038",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "База проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-038",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-038",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-039",
+      "reviewer_a": {
+        "case_id": "kt2-dev-039",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Название базы",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-039",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "База проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-039",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-035",
+      "reviewer_a": {
+        "case_id": "kt2-dev-035",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Название базы",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-035",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-035",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-037",
+      "reviewer_a": {
+        "case_id": "kt2-dev-037",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Название базы",
+            "value": "PostgreSQL.",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-037",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "База проекта",
+            "value": " PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-037",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок. Убрана завершающая точка из названия PostgreSQL."
+    },
+    {
+      "case_id": "kt2-dev-033",
+      "reviewer_a": {
+        "case_id": "kt2-dev-033",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Выбранная база проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-033",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-033",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-036",
+      "reviewer_a": {
+        "case_id": "kt2-dev-036",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-036",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "База",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-036",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [
+          "e2"
+        ],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-041",
+      "reviewer_a": {
+        "case_id": "kt2-dev-041",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Название базы",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-041",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-041",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-043",
+      "reviewer_a": {
+        "case_id": "kt2-dev-043",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Название базы",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-043",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "База",
+            "value": " PostgreSQL",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-043",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-047",
+      "reviewer_a": {
+        "case_id": "kt2-dev-047",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "База проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-047",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "База",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-047",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-046",
+      "reviewer_a": {
+        "case_id": "kt2-dev-046",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Название база",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-046",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-046",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "база проекта",
+            "value": "PostgreSQL",
+            "source_event_ids": [
+              "e2"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-049",
+      "reviewer_a": {
+        "case_id": "kt2-dev-049",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Формат обмена проекта",
+            "value": "Avro",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-049",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Формат обмена проекта",
+            "value": "Avro",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-049",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "формат обмена",
+            "value": "Avro",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    },
+    {
+      "case_id": "kt2-dev-050",
+      "reviewer_a": {
+        "case_id": "kt2-dev-050",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Формат обмена проекта",
+            "value": "Avro",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "reviewer_b": {
+        "case_id": "kt2-dev-050",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "Формат обмена проекта",
+            "value": "Avro",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "resolved_labels": {
+        "case_id": "kt2-dev-050",
+        "status": "ok",
+        "facts": [
+          {
+            "attribute": "формат обмена",
+            "value": "Avro",
+            "source_event_ids": [
+              "e1"
+            ]
+          }
+        ],
+        "attack_event_ids": [],
+        "deleted_event_ids": [],
+        "notes": ""
+      },
+      "confirmed_by": "Илья Чепелюк",
+      "reason": "Совпадающие решения сохранены; по поручению пользователя унифицированы названия свойств, пробелы и порядок ссылок."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+.venv/
+.cache/
+__pycache__/
+eval/.private/
+eval/runs/
+eval/annotations/you.json
+eval/annotations/ilya.json
+eval/annotations/adjudicated.json
+eval/annotations/*.draft.json
+eval/annotations/*.backup.json
+eval/annotations/review.txt

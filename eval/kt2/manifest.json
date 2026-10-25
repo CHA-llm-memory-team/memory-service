@@ -1,0 +1,86 @@
+{
+  "version": "kt2-v1-reviewed",
+  "status": "reviewed_and_frozen",
+  "base_commit": "64f1bf3",
+  "total_cases": 100,
+  "development": {
+    "path": "dev.jsonl",
+    "count": 70,
+    "sha256": "b061d7065b12c21120d1a96aed608fe5a84379eeca35cb65246e1a4de5755194",
+    "categories": {
+      "recall": 11,
+      "update": 10,
+      "conflict": 7,
+      "delete": 14,
+      "expiry": 7,
+      "poisoning": 10,
+      "noise": 4,
+      "security_control": 7
+    },
+    "previous_candidate_sha256": "20477bc96eda6743cf34f4cc85e87d78631b3d9f58ddf48f313ad082ebafe9d5"
+  },
+  "heldout": {
+    "path": "eval/.private/kt2-holdout-v1.zip",
+    "count": 30,
+    "sha256": "03b221c7935f23e5033920550e2a3e4d849a016b9421564a883b613e204549e4",
+    "categories": {
+      "recall": 4,
+      "update": 5,
+      "conflict": 3,
+      "delete": 6,
+      "expiry": 3,
+      "poisoning": 5,
+      "security_control": 3,
+      "noise": 1
+    },
+    "keeper": "user",
+    "authoring_validation": "passed_before_sealing",
+    "review_status": "sealed_until_kt4",
+    "keeper_assignment_confirmed": true
+  },
+  "provenance": {
+    "author": "assistant-authored synthetic dataset; 30 development final answers reviewed by humans",
+    "known_cases": 20,
+    "new_development_cases": 50,
+    "heldout_author_independent": false,
+    "family_overlap": false,
+    "limitation": "Пакет не просмотрен после создания; общий автор и вспомогательные функции не дают независимости внешнего теста."
+  },
+  "source_policy_sha256": "f7a79cab924f769109ea1b69deb96453801e94a25b01c0ff43ef803e1e696f1a",
+  "text_hash_normalization": "lf",
+  "human_reviewed_final_cases": 30,
+  "human_evidence": {
+    "you.json": "d3e543207f83b166481f302d8ba718d694250d44c68881ed1473fee77d5ac499",
+    "ilya.json": "8082147333cc0e18dac2cb1c42259753623ad74438d01459166e88bf52f35a92",
+    "adjudicated.json": "29ca2495928df588c3d8b13169911c1551d7903c87a718e9e084d060331b2fd7"
+  },
+  "annotation_review": {
+    "path": "eval/kt2/annotation_resolution.json",
+    "sha256": "bc07995358dd9dd5700b3b3a54983800e2cb7e692e0d62a2cf35c61536b97396",
+    "count": 30
+  },
+  "method_hashes": {
+    "eval/baseline.py": "9b8da6b4f978362abf5b261aaacf4a9c2a9bc2f122499cddc9bd76edfa969b9b",
+    "eval/score.py": "7b7fb5cdc45a5c937ee6b9c98ba3dac1565b766732fcb0e48cba4d0496da40ec",
+    "eval/annotations.py": "f250f424cc4067736547bf4081998d38b5073a6035fe872f18f6be8eebecf1b4",
+    "eval/freeze.py": "2e91f9ff020c4aaf039e7ff48c3e0b29f490c04e80019fa7444b3faf6533ad78",
+    "eval/validate.py": "d3f96440a24dfeb210665521640342e849e6eff79098416661d3422b8072a71e",
+    "eval/check_kt2.py": "ebb1e83ce3af2d70051af639d282e0c7b25ab035b3487902627e0cf3ee357199",
+    "eval/kt2/answer_instructions.txt": "4da1206b8dac674d84bdcad9ce7a4fd0a13d9f00a5f0582793b38e716a796756",
+    "design_doc.md": "6cf57860e09cf4d58b9cebef98bb1011de6df717848ad772fdc6e459b84cd668",
+    "eval/kt2/protocol.json": "10b32b110919547ca50a81be8a342dccac0ded2aaf14fb35d9134adf1b9d62a1"
+  },
+  "documentation_revisions": [
+    {
+      "revision": "0.8",
+      "date": "2026-10-25",
+      "files": [
+        "README.md",
+        "design_doc.md"
+      ],
+      "previous_design_sha256": "23ea23c555518cf6de5922e3508c27f3bd7794684d4112ad8e4b716a9b11e747",
+      "design_sha256": "6cf57860e09cf4d58b9cebef98bb1011de6df717848ad772fdc6e459b84cd668",
+      "change": "Редактура текста: сокращены повторы и служебные пояснения. Данные, разметки, код и настройки опытов сохранены."
+    }
+  ]
+}
