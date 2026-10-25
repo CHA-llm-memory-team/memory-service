@@ -1,0 +1,15 @@
+{
+  "kind": "context_preparation_only",
+  "split": "dev",
+  "cases": 70,
+  "questions": 100,
+  "dataset_version": "kt2-v1-reviewed",
+  "dataset_sha256": "b061d7065b12c21120d1a96aed608fe5a84379eeca35cb65246e1a4de5755194",
+  "encoding": "o200k_base",
+  "contexts_over_budget": 0,
+  "truncated_contexts": 4,
+  "mean_memory_tokens": 175.42,
+  "paid_model_calls": 0,
+  "answer_quality": null,
+  "notes": "Проверена подготовка контекста; ответы агента и качество памяти не измерялись."
+}

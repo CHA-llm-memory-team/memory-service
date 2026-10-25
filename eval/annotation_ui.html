@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Разметка памяти · КТ2</title>
+<style>
+:root{font-family:Segoe UI,Arial,sans-serif;color:#22332e;background:#f5f6f2;font-size:15px;--green:#185c46;--muted:#64736b;--line:#d9dfd8}
+*{box-sizing:border-box}body{margin:0}button,input,textarea,select{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.5}button,input,textarea,select{border:1px solid var(--line);border-radius:8px}button{background:white;color:inherit;padding:10px 15px}button:hover:not(:disabled){border-color:var(--green);background:#f0f6f1}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #e3ab4d;outline-offset:2px}input,textarea,select{padding:10px;background:white;color:inherit}textarea{resize:vertical;min-height:70px;width:100%}h1,h2,h3,p{margin-top:0}h1{font-size:21px;letter-spacing:-.5px;margin-bottom:4px}h2{font-size:19px;margin-bottom:12px}h3{font-size:16px;margin-bottom:9px}.muted{color:var(--muted);font-size:13px;line-height:1.55}.top{background:#fff;border-bottom:1px solid var(--line);padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;gap:14px;align-items:center}.mark{width:40px;height:40px;background:var(--green);color:white;border-radius:11px;display:grid;place-items:center;font-weight:700}.tools{display:flex;gap:12px;align-items:center}.saved{font-size:13px;color:var(--green);max-width:250px}.wrap{max-width:1460px;margin:auto;padding:22px 28px}.overview{display:flex;align-items:center;gap:20px;margin-bottom:16px;flex-wrap:wrap}.progress{height:6px;background:#dfe6dc;border-radius:6px;flex:1;min-width:100px;overflow:hidden}.progress>div{background:var(--green);height:100%;transition:width .2s}.nav{display:flex;gap:8px;align-items:center}.nav select{max-width:265px}.grid{display:grid;grid-template-columns:minmax(320px,1.03fr) minmax(400px,1fr);gap:22px;align-items:start}.panel{background:white;border:1px solid var(--line);border-radius:13px;padding:22px;min-width:0}.eyebrow{font-size:11px;font-weight:700;letter-spacing:1.3px;color:var(--muted);text-transform:uppercase;margin-bottom:10px}.question{background:#eef4ed;border:1px solid #d3e2d3;padding:18px;border-radius:10px;margin-bottom:20px}.question h2{font-size:21px;line-height:1.4;margin-bottom:12px}.meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.tag{font-size:12px;padding:4px 7px;border-radius:5px;background:#f1f3ef;color:#56635a}.question .tag{background:#fff9}.timeline{max-height:calc(100vh - 400px);min-height:300px;overflow:auto;padding-right:8px}.event{border-left:2px solid #dce4db;margin-left:6px;padding:0 0 22px 18px;position:relative}.event:before{content:'';position:absolute;left:-5px;top:6px;width:8px;height:8px;border-radius:50%;background:#91a698}.event.forget{border-color:#c98b48}.event.forget:before{background:#c98b48}.eventhead{display:flex;gap:9px;align-items:center;margin-bottom:8px;font-size:12px;color:var(--muted);flex-wrap:wrap}.eid{font-weight:700;color:#263b30}.text{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6;margin-bottom:9px}.raw{white-space:pre-wrap;font-size:12px;max-height:250px;overflow:auto;background:#f5f6f3;padding:12px;border-radius:7px}.eventflags{display:flex;gap:13px;flex-wrap:wrap}.check{font-size:13px;display:flex;align-items:flex-start;gap:6px;cursor:pointer;line-height:1.4}.check input{accent-color:var(--green);margin-top:3px}.statusgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.statusbtn{text-align:left;padding:12px}.statusbtn b{display:block;font-size:14px;margin-bottom:4px}.statusbtn span{display:block;font-size:12px;line-height:1.4;color:var(--muted)}.statusbtn[aria-pressed=true]{border:2px solid var(--green);background:#edf5ee;padding:11px}.section{margin-top:24px;padding-top:20px;border-top:1px solid #e5e9e2}.sectionhead{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}.sectionhead h3{margin:0}.small{padding:7px 11px;font-size:13px}.fact{background:#f7f8f4;border:1px solid #e0e5dc;border-radius:10px;padding:14px;margin-top:12px}.facthead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.remove{border:none;color:#9c493c;padding:4px 8px;background:transparent}.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:600}.field input{width:100%;min-width:0;font-weight:400}.field.full{grid-column:1/-1}.sources{margin-top:12px}.sources summary{font-size:13px;cursor:pointer}.sourcelist{max-height:200px;overflow:auto;display:grid;gap:10px;margin-top:12px}.sourceitem{font-size:12px}.empty{font-size:13px;color:var(--muted);padding:14px 0}.actions{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:20px}.primary{background:var(--green);border-color:var(--green);color:white;font-weight:600}.primary:hover:not(:disabled){background:#104c39;color:white}.banner{padding:12px 16px;border-radius:8px;line-height:1.5;font-size:13px;margin-bottom:15px}.banner.error{background:#fff0ea;color:#8b3225;border:1px solid #ebbcad}.banner.success{background:#eaf4e9;color:#205235;border:1px solid #c7dec4}.help{margin-bottom:18px;font-size:13px;line-height:1.6}.help summary{cursor:pointer;font-weight:600}.help p{margin:9px 0 0}.finish{margin-top:22px}.finishbox{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:14px}.finishbox input[type=text]{min-width:220px;flex:1}.footer{margin:16px 0;color:var(--muted);font-size:12px}.badge{font-size:12px;color:var(--green);font-weight:600}.hide{display:none!important}#boot{margin:60px auto;max-width:650px;padding:25px;white-space:pre-wrap}@media(min-width:1050px){.answer{position:sticky;top:18px}}@media(max-width:900px){.grid{grid-template-columns:1fr}.timeline{max-height:480px}.top{padding:16px}.wrap{padding:16px}.tools{flex-wrap:wrap;justify-content:flex-end}.saved{max-width:150px}.panel{padding:18px}}@media(max-width:520px){.fields{grid-template-columns:1fr}.statusgrid{grid-template-columns:1fr}.overview{gap:12px}.top{align-items:flex-start}.tools{max-width:140px}.mark{display:none}.nav{width:100%}.nav select{flex:1;min-width:0}.question h2{font-size:18px}}
+</style>
+</head>
+<body>
+<div id="boot" role="status">Открываю ваш бланк…</div>
+<div id="app" class="hide">
+<header class="top"><div class="brand"><div class="mark">М</div><div><h1>Разметка памяти</h1><div class="muted" id="identity"></div></div></div><div class="tools"><span id="saved" class="saved" role="status" aria-live="polite">Все изменения сохранены</span><button id="export" class="small">Скачать бланк</button></div></header>
+<main class="wrap">
+<div id="error" class="banner error hide" role="alert"></div>
+<div id="notice" class="banner success hide" role="status"></div>
+<div class="overview"><strong id="progressText"></strong><div class="progress" role="progressbar" aria-label="Завершённые истории" aria-valuemin="0" aria-valuemax="30"><div id="progressBar"></div></div><div class="nav"><button id="prev" aria-label="Предыдущая история">←</button><select id="caseSelect" aria-label="Перейти к истории"></select><button id="next" aria-label="Следующая история">→</button></div></div>
+<details class="panel help"><summary>Как заполнять — коротко</summary><p>Прочитайте события слева и решите, что можно ответить на вопрос после всех изменений. Справа выберите статус и добавьте нужные для ответа факты. Для каждого факта отметьте события, которые его подтверждают.</p><p>Под событиями слева можно отметить попытку атаки и сведения, которые должны быть забыты. Если таких событий нет, оставьте отметки пустыми. Источник «результат инструмента» или «документ» сам по себе не означает атаку. Названия свойств пишите своими словами.</p><p>Черновики сохраняются автоматически. Нажмите «Готово, дальше», чтобы проверить и завершить историю. При сомнении оставьте заметку и вернитесь позже. Работайте самостоятельно, без чужой разметки и готовых ответов.</p></details>
+<div class="grid">
+<section class="panel"><div class="question"><div class="eyebrow">Вопрос после всех событий</div><h2 id="question"></h2><div class="meta" id="queryMeta"></div></div><div class="sectionhead"><h3>История событий</h3><span class="muted" id="eventCount"></span></div><p class="muted">Порядок показан как в истории. Время отдельного события может отличаться.</p><div id="events" class="timeline"></div></section>
+<section class="panel answer"><div class="sectionhead"><div class="eyebrow" id="caseTitle"></div><span class="badge" id="rowState"></span></div><h2>Ваше решение</h2><div class="muted">Какой ответ система должна дать сейчас?</div><div class="statusgrid" id="statuses"></div>
+<div class="section"><div class="sectionhead"><h3>Факты для ответа</h3><button class="small" id="addFact">+ Добавить факт</button></div><div class="muted">Укажите значение и подтвердившие его события. При противоречии можно добавить оба значения.</div><div id="facts"></div></div>
+<div class="section"><h3>Отметки событий</h3><p class="muted" id="flagsSummary"></p><div class="muted">Галочки ставятся под событиями слева. При неоднозначном удалении выберите «Нужно уточнение» и не отмечайте сведения как удалённые.</div></div>
+<div class="section"><label class="field" for="notes">Заметка или сомнение · необязательно</label><textarea id="notes" placeholder="Почему так решили? Что осталось неоднозначным?"></textarea></div>
+<div class="actions"><button id="later">Оставить на потом</button><button id="complete" class="primary">Готово, дальше →</button></div><p class="muted" style="margin:12px 0 0">Черновик сохраняется на этом компьютере. Ответ считается завершённым после нажатия «Готово».</p></section>
+</div>
+<section class="panel finish"><h3>Завершить всю разметку</h3><div class="muted" id="finishHint"></div><div class="finishbox"><input id="name" type="text" aria-label="Ваше имя" placeholder="Ваше имя"><label class="check"><input id="independent" type="checkbox">Заполнил(а) самостоятельно, без чужих ответов</label><button id="sign" class="primary">Подтвердить завершение</button></div></section>
+<div class="footer" id="pathHint"></div>
+</main></div>
+<script>
+'use strict';
+const token='__SESSION_TOKEN__';
+const $=id=>document.getElementById(id);
+const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
+const copy=value=>JSON.parse(JSON.stringify(value));
+let state,index=0,row,dirty=false,timer=null,chain=Promise.resolve(),busy=false,saveFailed=false;
+const statuses=[['ok','Ответ известен','Сведений достаточно для ответа'],['unknown','Неизвестно','Сведений нет, они забыты или устарели'],['conflict','Противоречие','Есть несовместимые сведения без разрешения'],['needs_clarification','Нужно уточнение','Непонятно, что именно просят забыть']];
+const sourceNames={user:'Пользователь',retrieved_document:'Документ',tool_output:'Результат инструмента'};
+async function api(path,body){const response=await fetch(path,{method:body?'POST':'GET',headers:{'X-Annotation-Token':token,...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});const result=await response.json();if(!response.ok)throw new Error(result.error||'Не удалось сохранить.');return result;}
+function error(message){$('error').textContent=message;$('error').classList.remove('hide');$('saved').textContent='Изменения не сохранены';}
+function clearError(){$('error').classList.add('hide');}
+function hasDraft(id){return Object.hasOwn(state.drafts,id);}
+function updateOverview(){
+  const completed=state.completed.filter(id=>!hasDraft(id)).length,total=state.cases.length;
+  $('progressText').textContent=`Готово ${completed} из ${total}`;
+  $('progressBar').style.width=`${completed/total*100}%`;
+  document.querySelector('.progress').setAttribute('aria-valuenow',completed);
+  document.querySelector('.progress').setAttribute('aria-valuemax',total);
+  $('caseSelect').replaceChildren(...state.cases.map((c,i)=>{const o=el('option','',`${hasDraft(c.case_id)?'◐ ':state.completed.includes(c.case_id)?'✓ ':'○ '}${i+1}. ${c.case_id}`);o.value=i;return o;}));
+  $('caseSelect').value=index;$('prev').disabled=index===0;$('next').disabled=index===total-1;
+  $('sign').disabled=completed!==total||state.signed;
+  $('finishHint').textContent=state.signed?`Разметка подтверждена: ${state.form.completed_by}. При дальнейшем редактировании понадобится подтвердить её снова.`:completed===total?'Все истории готовы. Укажите имя и подтвердите самостоятельную работу.':`Сначала завершите все истории. Осталось: ${total-completed}.`;
+  $('rowState').textContent=dirty||hasDraft(row?.case_id)?'Черновик':state.completed.includes(row?.case_id)?'Завершено':'Не заполнено';
+}
+function selectedIds(key){return new Set(row[key]||[]);}
+function toggleId(key,id,checked){const values=selectedIds(key);if(checked)values.add(id);else values.delete(id);row[key]=[...values];changed();renderFlags();}
+function checkbox(label,checked,callback,cls='check'){const wrap=el('label',cls);const input=el('input');input.type='checkbox';input.checked=checked;input.addEventListener('change',()=>callback(input.checked));wrap.append(input,document.createTextNode(label));return wrap;}
+function detailBlock(title,value){const details=el('details');details.append(el('summary','muted',title),el('pre','raw',JSON.stringify(value,null,2)));return details;}
+function renderEvents(){
+ const c=state.cases[index],list=$('events');list.replaceChildren();
+ const canDelete=c.events.some(e=>e.op==='forget');
+ const ingest=c.events.filter(e=>e.op==='ingest');$('eventCount').textContent=`Сообщений: ${ingest.length}`;
+ c.events.forEach(e=>{
+  if(e.op==='create_tree'){list.append(detailBlock(`Создано дерево «${e.name||e.tree_id}»`,e));return;}
+  const node=el('article',`event ${e.op==='forget'?'forget':''}`);
+  const head=el('div','eventhead');head.append(el('span','eid',e.event_id||e.operation_id||'Событие'),el('span','',e.op==='forget'?'Просьба забыть':sourceNames[e.source_id]||e.source_id||''));
+  if(e.occurred_at)head.append(el('span','',e.occurred_at));
+  node.append(head,el('div','text',e.text||''));
+  const meta=el('div','meta');['tree_id','tenant_id','subject_id'].forEach(k=>{if(e[k])meta.append(el('span','tag',`${({tree_id:'Дерево',tenant_id:'Команда',subject_id:'Владелец'})[k]}: ${e[k]}`));});
+  for(const [key,value] of Object.entries(e)){if(!['op','event_id','operation_id','occurred_at','source_id','text','tree_id','tenant_id','subject_id'].includes(key))meta.append(el('span','tag',`${key}: ${typeof value==='object'?JSON.stringify(value):value}`));}
+  node.append(meta);
+  if(e.op==='ingest'){const flags=el('div','eventflags');flags.style.marginTop='10px';flags.append(checkbox('Попытка атаки',selectedIds('attack_event_ids').has(e.event_id),checked=>toggleId('attack_event_ids',e.event_id,checked)));if(canDelete)flags.append(checkbox('Сведения должны быть забыты',selectedIds('deleted_event_ids').has(e.event_id),checked=>toggleId('deleted_event_ids',e.event_id,checked)));node.append(flags);}
+  node.append(detailBlock('Все поля события',e));list.append(node);
+ });
+}
+function renderStatuses(){
+ $('statuses').replaceChildren(...statuses.map(([value,title,description])=>{const b=el('button','statusbtn');b.setAttribute('aria-pressed',String(row.status===value));b.append(el('b','',title),el('span','',description));b.addEventListener('click',()=>{row.status=value;changed();renderStatuses();});return b;}));
+}
+function renderFlags(){const attacks=row.attack_event_ids||[],deleted=row.deleted_event_ids||[];$('flagsSummary').textContent=`Попытки атаки: ${attacks.length?attacks.join(', '):'не отмечены'}. Забыть сведения из: ${deleted.length?deleted.join(', '):'ничего не отмечено'}.`;}
+function renderFacts(){
+ const facts=row.facts||[];$('facts').replaceChildren();
+ if(!facts.length)$('facts').append(el('div','empty','Факты пока не добавлены. Если ответ неизвестен, оставьте список пустым.'));
+ const events=state.cases[index].events.filter(e=>e.op==='ingest');
+ facts.forEach((fact,i)=>{
+  const box=el('div','fact'),head=el('div','facthead');head.append(el('b','',`Факт ${i+1}`));const remove=el('button','remove','Убрать');remove.setAttribute('aria-label',`Убрать факт ${i+1}`);remove.onclick=()=>{row.facts.splice(i,1);changed();renderFacts();};head.append(remove);box.append(head);
+  const fields=el('div','fields');
+  const attr=el('label','field','Какое свойство?');const input=el('input');input.placeholder='Например: время встречи';input.value=fact.attribute||'';input.oninput=()=>{fact.attribute=input.value;changed();};attr.append(input);
+  const valueLabel=el('label','field','Значение');const value=el('input');const typed=Object.hasOwn(fact,'_invalid')||typeof fact.value!=='string';value.value=Object.hasOwn(fact,'_invalid')?fact._invalid:typed?JSON.stringify(fact.value):fact.value;value.placeholder='Что нужно запомнить';
+  const kind=el('select');kind.setAttribute('aria-label',`Тип значения факта ${i+1}`);for(const [v,t] of [['text','Обычный текст'],['json','Число, список или объект (JSON)']]){const o=el('option','',t);o.value=v;kind.append(o);}kind.value=typed?'json':'text';
+  function setValue(){if(kind.value==='text'){fact.value=value.value;delete fact._invalid;}else{try{fact.value=JSON.parse(value.value);delete fact._invalid;}catch{fact._invalid=value.value;}}changed();}
+  value.oninput=setValue;kind.onchange=setValue;valueLabel.append(value);fields.append(attr,valueLabel);const typeLabel=el('label','field full','Формат значения');typeLabel.append(kind);fields.append(typeLabel);box.append(fields);
+  const sources=el('details','sources');sources.open=!(fact.source_event_ids||[]).length;const summary=el('summary','',`Подтверждающие события: ${(fact.source_event_ids||[]).join(', ')||'выберите'}`);sources.append(summary);const options=el('div','sourcelist');
+  events.forEach(e=>options.append(checkbox(`${e.event_id} — ${(e.text||'').slice(0,110)}${(e.text||'').length>110?'…':''}`,(fact.source_event_ids||[]).includes(e.event_id),checked=>{const ids=new Set(fact.source_event_ids||[]);if(checked)ids.add(e.event_id);else ids.delete(e.event_id);fact.source_event_ids=[...ids];summary.textContent=`Подтверждающие события: ${fact.source_event_ids.join(', ')||'выберите'}`;changed();},'check sourceitem')));
+  sources.append(options);box.append(sources);$('facts').append(box);
+ });
+}
+function renderCase(){
+ const c=state.cases[index];row=copy(state.drafts[c.case_id]||state.form.labels.find(x=>x.case_id===c.case_id));
+ $('question').textContent=c.query.text;$('queryMeta').replaceChildren();
+ const meta=[['Время вопроса',c.query.now],['Доступные деревья',(c.query.allowed_tree_ids||[]).join(', ')],['Команда',c.query.tenant_id],['Владелец',c.query.subject_id]];
+ meta.forEach(([name,value])=>{if(value)$('queryMeta').append(el('span','tag',`${name}: ${value}`));});
+ $('caseTitle').textContent=`История ${index+1} / ${state.cases.length} · ${c.case_id}`;
+ $('notes').value=row.notes||'';renderStatuses();renderFacts();renderEvents();renderFlags();updateOverview();
+ if(state.locked){
+  document.querySelectorAll('.answer button,.answer input,.answer select,.answer textarea,#events input,.finish input,.finish button').forEach(n=>n.disabled=true);
+  $('notice').textContent='КТ2 зафиксирована. Здесь доступны исходные разметки для просмотра; итоговые решения находятся в отчёте разбора.';$('notice').classList.remove('hide');
+ }
+}
+function changed(){dirty=true;saveFailed=false;$('saved').textContent='Сохраняю черновик…';$('rowState').textContent='Черновик';clearTimeout(timer);timer=setTimeout(()=>saveDraft().catch(()=>{}),600);}
+function enqueue(payload){
+ const task=chain.catch(()=>{}).then(async()=>{const next=await api('/api/save',{...payload,revision:state.revision});state=next;saveFailed=false;clearError();updateOverview();return next;});
+ chain=task;return task.catch(e=>{saveFailed=true;error(e.message);throw e;});
+}
+async function saveDraft(){
+ clearTimeout(timer);timer=null;
+ if(!dirty){await chain;return;}
+ const snapshot=copy(row);dirty=false;
+ try{await enqueue({action:'draft',label:snapshot});$('saved').textContent=dirty?'Сохраняю черновик…':'Черновик сохранён';}
+ catch(e){dirty=true;throw e;}
+}
+async function navigate(to){if(busy||to<0||to>=state.cases.length)return;busy=true;try{await saveDraft();if(saveFailed)throw new Error('Сначала сохраните изменения.');index=to;dirty=false;$('notice').classList.add('hide');renderCase();}catch(e){error(e.message);}finally{busy=false;}}
+$('prev').onclick=()=>navigate(index-1);$('next').onclick=()=>navigate(index+1);$('caseSelect').onchange=()=>navigate(Number($('caseSelect').value));
+$('notes').oninput=()=>{row.notes=$('notes').value;changed();};
+$('addFact').onclick=()=>{row.facts=row.facts||[];row.facts.push({attribute:'',value:'',source_event_ids:[]});changed();renderFacts();};
+$('later').onclick=async()=>{if(index+1<state.cases.length)await navigate(index+1);else{try{await saveDraft();$('notice').textContent='Черновик сохранён. К нему можно вернуться через список историй.';$('notice').classList.remove('hide');}catch(e){error(e.message);}}};
+$('complete').onclick=async()=>{
+ if(busy)return;busy=true;$('complete').disabled=true;
+ try{
+  await saveDraft();
+  const label=copy(row);
+  if((label.facts||[]).some(f=>Object.hasOwn(f,'_invalid')))throw new Error('Проверьте формат значения: в режиме JSON нужны корректное число, список или объект.');
+  label.facts=label.facts||[];label.attack_event_ids=label.attack_event_ids||[];label.deleted_event_ids=label.deleted_event_ids||[];
+  await enqueue({action:'complete',label});dirty=false;
+  const next=state.cases.findIndex((c,i)=>i>index&&(!state.completed.includes(c.case_id)||hasDraft(c.case_id)));
+  const any=state.cases.findIndex(c=>!state.completed.includes(c.case_id)||hasDraft(c.case_id));
+  if(next>=0)index=next;else if(any>=0)index=any;
+  renderCase();$('saved').textContent='Ответ сохранён';
+  if(any<0){$('notice').textContent='Все истории готовы. Осталось указать имя и подтвердить самостоятельную работу внизу страницы.';$('notice').classList.remove('hide');}
+ }catch(e){error(e.message);$('error').scrollIntoView({block:'nearest',behavior:'smooth'});}finally{busy=false;$('complete').disabled=false;}
+};
+$('sign').onclick=async()=>{if(busy)return;busy=true;try{await saveDraft();await enqueue({action:'sign',name:$('name').value,independent:$('independent').checked});$('saved').textContent='Разметка завершена';$('notice').textContent='Готово. Подтверждение и ответы сохранены в вашем бланке.';$('notice').classList.remove('hide');}catch(e){error(e.message);}finally{busy=false;}};
+$('export').onclick=async()=>{try{await saveDraft();const form=await api('/api/export');const blob=new Blob([JSON.stringify(form,null,2)+'\n'],{type:'application/json'});const url=URL.createObjectURL(blob);const a=el('a');a.href=url;a.download=`${state.reviewer}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);$('notice').textContent='Скачан бланк с завершёнными ответами. Незавершённые черновики остаются на этом компьютере.';$('notice').classList.remove('hide');}catch(e){error(e.message);}};
+window.addEventListener('beforeunload',e=>{if(dirty||busy||saveFailed){e.preventDefault();e.returnValue='';}});
+async function boot(){try{state=await api('/api/state');index=Math.max(0,state.cases.findIndex(c=>!state.completed.includes(c.case_id)||hasDraft(c.case_id)));$('identity').textContent=`КТ2 · ${state.reviewer==='you'?'Ваш бланк':'Бланк Ильи'} · локально на компьютере`;$('pathHint').textContent=`Ответы: eval/annotations/${state.reviewer}.json · Черновики: ${state.reviewer}.draft.json · Готовые ответы и чужая разметка на эту страницу не загружаются.`;$('name').value=state.form.completed_by||'';$('independent').checked=state.form.independently_completed===true;renderCase();$('boot').classList.add('hide');$('app').classList.remove('hide');}catch(e){$('boot').textContent='Не удалось открыть бланк.\n'+e.message+'\nПерезапустите локальный сервер и обновите страницу.';}}
+boot();
+</script>
+</body>
+</html>
